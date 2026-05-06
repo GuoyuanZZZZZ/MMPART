@@ -1,0 +1,11 @@
+result*/
+demo_examples/
+demo_examples_result/
+preprocess*/
+models*/
+*.npy
+*.tar
+*.pth
+*.pyc
+__pycache__/
+*/__pycache__/

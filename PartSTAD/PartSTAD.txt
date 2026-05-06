@@ -1,0 +1,26 @@
+conda create -n partstad python=3.10 
+conda activate partstad
+
+conda install conda-forge::gcc_linux-64==11.4.0
+conda install conda-forge::gxx_linux-64==11.4.0
+conda install -c "nvidia/label/cuda-12.4.0" cuda-toolkit
+conda install -c "nvidia/label/cuda-12.4.0" cuda-nvcc
+pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu124
+
+
+conda install pytorch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 pytorch-cuda=12.4 -c pytorch -c nvidia
+
+
+pip install matplotlib einops shapely timm yacs tensorboardX ftfy prettytable pymongo opencv-python transformers scipy open3d
+cd GLIP
+pip install --no-build-isolation -v -e .
+pip install -U pycocotools
+
+
+
+conda install -y -c fvcore -c conda-forge iopath
+pip install -U "git+https://github.com/facebookresearch/iopath.git"
+export FORCE_CUDA=1
+pip install iopath
+pip install --no-build-isolation -v "git+https://github.com/facebookresearch/pytorch3d.git@stable"
+
